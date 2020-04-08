@@ -20,7 +20,6 @@ let name = [
     'Poutine',
     'Squall'
 ];
-
 let verb = [
     'danser',
     'frapper',
@@ -38,30 +37,31 @@ let verb = [
     'manger',
     'aplatir'
 ];
-
-let item = [
+let femItem = [
     'valise',
-    'poivier connecté',
     'épée',
-    'cahier',
-    'pneu',
     'table',
-    'godsabre',
     'truelle',
     'madeleine',
+    'guimbarde',
+    'table bancale',
+    'souris',
+    'dague'
+];
+let mascitem = [
+    'poivier connecté',
+    'cahier',
+    'pneu',
+    'godsabre',
     'trident',
     'pull rose',
     'pc',
     'tisonnier',
-    'guimbarde',
     'chandelier',
     'verre',
-    'table bancale',
     'arbre',
-    'souris',
-    'dague'
 ];
-
+let item = femItem.concat(mascitem);
 let temp = [
     30,
     24,
@@ -82,7 +82,6 @@ let temp = [
     -100,
     55
 ];
-
 let place = [
     'Tombouctou',
     'Lille',
@@ -106,6 +105,11 @@ let place = [
     'Berlaimont'
 ];
 
+let num;
+let result = [];
+let sent;
+let hist = [];
+
 let theName = document.getElementById("name");
 let valid = document.getElementById('valid');
 let yes = document.getElementById("yes");
@@ -113,76 +117,60 @@ let suite = document.getElementById('suite');
 let text = document.getElementById('text');
 
 
-function  generateNum(table){
-    return Math.floor(Math.random() * table.length);
+function  SetWord(array){
+    num = Math.floor(Math.random() * array.length);
+    result.push(array[num]);
 }
 
-let x= 0;
-console.log(verb[1].charAt(0));
+function SetTransitive(array,index){
+    let x = array[index].charAt(0);
+    switch(x){
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+        case 'y':
+        case 'h':
+            array.splice(index,0,"d'");
+        break;
+        default:
+            array.splice(index,0,"de ");
+            break;
+    }
 
+}
 
+/**
+ * @return {string}
+ */
+function SetArticle(g){
+    return (femItem[g] ? " une " : " un ");
+}
 
+/**
+ * @return {string}
+ */
+function SetSentence(arr){
+    sent = arr[0]+" est en train "+arr[1]+arr[2]+arr[3]+arr[4]+" alors qu'il fait "+arr[5]+"°C à "+arr[6];
+    return sent;
+}
 
+function GetSentence (){
+    SetWord(name);
+    SetWord(verb);
+    SetTransitive(result,1);
+    SetWord(item);
+    result.splice(3,0,SetArticle(result[3]));
+    SetWord(temp);
+    SetWord(place);
+    SetSentence(result);
+    console.log(sent);
+    hist.push(sent);
+    text.innerHTML = sent;
+    result.splice(0,result.length);
 
-
-
-
-
-
-
-
-// function genreDefine(){
-// a = generateNum(noms);
-//     switch (noms[a]) {
-//         case "Anais":
-//         case "Eglantine":
-//         case "Brigitte":
-//             genre = ", elle ";
-//             break;
-//         default:
-//             genre = ", il ";
-//             break;
-//             }
-//     return genre;
-// }
-//
-// function apostrophe() {
-//     a = generateNum(verbes);
-//
-//     switch (verbes[a]) {
-//         case "aplatir":
-//         case "attaquer":
-//             de = " d' ";
-//             break;
-//         default:
-//             de = " de ";
-//             break;
-//
-//     }
-// return de;
-// }
-//
-// function mascFemDefine(){
-//     a = generateNum(objets);
-//     switch (objets[a]) {
-//         case "valise":
-//         case "épée":
-//         case "table":
-//         case "truelle":
-//         case "madeleine":
-//         case "trident":
-//         case "guimbarde":
-//         case "souris":
-//         case "dague":
-//             unUne = " une ";
-//             break;
-//         default:
-//             unUne = " un ";
-//             break;
-//     }
-// return unUne;
-// }
-//
+}
 // function setPlace () {
 //     a = generateNum(lieux);
 //     switch (lieux[a])
@@ -211,35 +199,20 @@ console.log(verb[1].charAt(0));
 //     return place;
 // }
 //
-//
-// valid.addEventListener("click", function captureName (){
-//     theName = theName.value;
-//     console.log(theName);
-//     text.innerHTML = "Ok "+theName+", Tu veux lire une histoire de dingue ?";
-//     valid.style.display = "none";
-//     document.getElementById("name").style.display = "none";
-//     yes.style.display = "block";
-//     noms.push(theName);
-//     });
-//
-// yes.addEventListener("click", function generateStory(){
-//     generateNumbers();
-//     genreDefine();
-//     mascFemDefine();
-//     apostrophe();
-//     setPlace ();
-//     text.innerHTML = "C'est "+noms[a]+genre+"est en train"+de+verbes[b]+unUne+objets[c]+" alors qu'il fait "
-//         +temperatures[d]+place+lieux[e];
-//     yes.style.display = "none";
-//     suite.style.display = "block";
-//     });
-//
-// suite.addEventListener("click", function generateNewStory(){
-//     generateNumbers();
-//     genreDefine();
-//     mascFemDefine();
-//     apostrophe();
-//     setPlace ();
-//     text.innerHTML = "C'est "+noms[a]+genre+"est en train"+de+verbes[b]+unUne+objets[c]+" alors qu'il fait "
-//         +temperatures[d]+place+lieux[e];
-// });
+
+valid.addEventListener("click", function (){
+    theName = theName.value;
+    name.push(theName);
+    text.innerHTML = "Ok "+theName+", Tu veux lire une histoire de dingue ?";
+    valid.style.display = "none";
+    document.getElementById("name").style.display = "none";
+    yes.style.display = "block";
+    });
+
+yes.addEventListener("click", function (){
+    GetSentence();
+    yes.style.display = "none";
+    suite.style.display = "block";
+    });
+
+suite.onclick = GetSentence;

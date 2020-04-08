@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f51aa8d3-769c-44b5-bd76-166b1332d3aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Debrief.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Débrief.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Debrief.md" beforeDir="false" afterPath="$PROJECT_DIR$/Debrief.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,8 +56,16 @@
       <updated>1574426430291</updated>
       <workItem from="1574426431578" duration="18996000" />
       <workItem from="1574675636986" duration="1630000" />
-      <workItem from="1586266358093" duration="15936000" />
+      <workItem from="1586266358093" duration="26077000" />
     </task>
+    <task id="LOCAL-00001" summary="new js code">
+      <created>1586353066501</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586353066501</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,11 +88,21 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/L_histoire_random" />
     </ignored-roots>
+    <MESSAGE value="new js code" />
+    <option name="LAST_COMMIT_MESSAGE" value="new js code" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1929" y="-196" key="CommitChangelistDialog2" timestamp="1586353064997">
+      <screen x="1366" y="-313" width="1920" height="1040" />
+    </state>
+    <state x="1929" y="-196" key="CommitChangelistDialog2/0.0.1366.728/1366.-313.1920.1040@1366.-313.1920.1040" timestamp="1586353064997" />
     <state x="1458" y="-221" width="1736" height="856" key="DiffContextDialog" timestamp="1586353039044">
       <screen x="1366" y="-313" width="1920" height="1040" />
     </state>
     <state x="1458" y="-221" width="1736" height="856" key="DiffContextDialog/0.0.1366.728/1366.-313.1920.1040@1366.-313.1920.1040" timestamp="1586353039044" />
+    <state x="1918" y="-57" key="Vcs.Push.Dialog.v2" timestamp="1586353073498">
+      <screen x="1366" y="-313" width="1920" height="1040" />
+    </state>
+    <state x="1918" y="-57" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.-313.1920.1040@1366.-313.1920.1040" timestamp="1586353073498" />
   </component>
 </project>
