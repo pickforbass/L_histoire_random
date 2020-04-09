@@ -7,15 +7,14 @@ Objectif : faire apparaitre une phrase du type "[nom] est en train [transitif] [
 - Les verbes,
 - Les items féminins, masculins et un tableau pour fusionner les deux,
 - Les températures,
-- Les lieux,
+- Les lieux (même structure que pour les items),
 - un vide pour stocker le résultat des randoms,
 - un vide pour créer l'historique des phrases générées,
 
 
 ### 2 créer les variables
 - une pour récupérer le tirage au sort 
-- une pour stocker le résultat final pour affichage
-- une pour l'historique
+- une pour stocker la phrase complète
 - celles pour récupérer les id présents dans l'HTML
 
 
@@ -24,8 +23,11 @@ Objectif : faire apparaitre une phrase du type "[nom] est en train [transitif] [
 - On contrôle les masculins et féminins, console et voyelle, détails du lieu pour choisir les bons articles et rendre la phrase correcte grammaticalement
 - On crée la phrase, elle s'affiche et est stockée dans l'historique. 
 
-###4 les plus 
-- On peut mettre ses propres noms, verbes, item etc... 
+
+###4 les + 
+- On peut mettre ses propres mots, verbes, item etc... 
+- On peut retrouver l'historique des phrases générées
+
 
 
 

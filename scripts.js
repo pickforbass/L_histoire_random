@@ -29,8 +29,8 @@ let verb = [
     'lubrifier',
     'trikiter',
     'procrastiner',
-    'foutre',
-    'prendre',
+    'chahuter',
+    'se fourvoyer',
     'nager',
     'recoudre',
     'punir',
@@ -90,7 +90,6 @@ let temp = [
     55
 ];
 
-
 let placeA = [
     'Tombouctou',
     'Lille',
@@ -104,39 +103,52 @@ let placeA = [
     'New York',
     'Berlaimont'
 ];
+
 let placeDans = [
     'la Batcave',
     'un réacteur nucléaire',
     'une cave',
-
+    'le bureau',
+    'la poubelle'
 ];
+
 let placeSur= [
     'Namek',
     'une île',
-
+    'la Lune',
+    'le Rhône'
 ];
+
 let placeAu = [
     'Caire',
     'Tampon',
-
+    'Guatemala',
+    'Pérou',
+    'Finistère'
 ];
+
 let placeEn = [
     'Martinique',
     'enfer',
+    'Occitanie',
+    'Suisse'
 ];
 
 let place = placeA.concat(placeDans, placeSur, placeAu, placeEn);
 
-// ----- Variables
-let num;
 let result = [];
-let sent;
+
 let hist = [];
-let theName = document.getElementById("name");
+
+// ----- Variables & elements of document
+let num;
+let sent;
+let nameUser = document.getElementById("name");
 let valid = document.getElementById('valid');
 let yes = document.getElementById("yes");
 let suite = document.getElementById('suite');
 let text = document.getElementById('text');
+let historyList = document.getElementById('history-list');
 
 // ----- Functions
 
@@ -200,19 +212,29 @@ function GetSentence (){
     SetWord(place);
     result.splice(6,0, prePlace(result[6]));
     SetSentence(result);
-    hist.push(sent);
+    hist.unshift(sent);
     text.innerHTML = sent;
     result.splice(0,result.length);
 }
 
+function AddHistList(){
+    let li = document.createElement('li');
+    li.innerHTML=hist[1];
+    historyList.appendChild(li);
+}
+
+
+// ----- Event Listeners
+
 valid.addEventListener("click", function (){
-    theName = theName.value;
+    theName = nameUser.value;
     name.push(theName);
     text.innerHTML = "Ok "+theName+", Tu veux lire une histoire de dingue ?";
     valid.style.display = "none";
-    document.getElementById("name").style.display = "none";
+    nameUser.style.display = "none";
     yes.style.display = "block";
     });
+
 
 yes.addEventListener("click", function (){
     GetSentence();
@@ -220,4 +242,9 @@ yes.addEventListener("click", function (){
     suite.style.display = "block";
     });
 
-suite.onclick = GetSentence;
+
+suite.addEventListener("click", function(){
+    GetSentence();
+    AddHistList();
+    });
+

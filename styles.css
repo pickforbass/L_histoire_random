@@ -29,8 +29,7 @@ p
     text-align: center;
 }
 
-button
-{
+button {
     margin: 40px auto 0 auto;
     width: 40%;
     height: 40px;
@@ -42,19 +41,52 @@ button
     font-size: 20px;
 }
 
-button:active
-{
+button:active {
     background: mintcream;
     color: #292929;
     transition-duration : 0.2s;
 }
 
-#yes, #suite
-{
+#yes, #suite {
     display : none;
 }
 
-#container
-{
+#container {
     display: none;
 }
+
+header {
+    }
+
+.head-content {
+    position : relative;
+    display: inline-block;
+    background-color: mintcream;
+    color: #292929;
+    width : 25%;
+    height: 100px;
+    border-radius: 10px;
+    top: -10px;
+    margin : 0 10px 0 10px;
+    vertical-align: top;
+    font-size: 10px;
+    overflow : auto;
+}
+
+#header-left{
+    left : 0;
+}
+
+#header-right{
+    right : 0;
+}
+
+ul, li{
+    margin: 5px;
+    padding : 0;
+    list-style: none;
+}
+
+
+
+
