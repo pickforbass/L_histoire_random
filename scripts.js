@@ -1,3 +1,5 @@
+// ---- Arrays
+
 let name = [
     'Babe',
     'Paul',
@@ -20,6 +22,7 @@ let name = [
     'Poutine',
     'Squall'
 ];
+
 let verb = [
     'danser',
     'frapper',
@@ -37,6 +40,7 @@ let verb = [
     'manger',
     'aplatir'
 ];
+
 let femItem = [
     'valise',
     'épée',
@@ -48,6 +52,7 @@ let femItem = [
     'souris',
     'dague'
 ];
+
 let mascitem = [
     'poivier connecté',
     'cahier',
@@ -61,7 +66,9 @@ let mascitem = [
     'verre',
     'arbre',
 ];
+
 let item = femItem.concat(mascitem);
+
 let temp = [
     30,
     24,
@@ -82,40 +89,56 @@ let temp = [
     -100,
     55
 ];
-let place = [
+
+
+let placeA = [
     'Tombouctou',
     'Lille',
     'Sataya',
     'Montcuq',
     'Paris',
-    'la Batcave',
     'Maubeuge',
-    'un réacteur nucléaire',
-    'Martinique',
     'Balamb garden',
-    'enfer',
     'Montbeliard',
-    'Namek',
     'Londres',
-    'une île',
-    'une cave',
-    'Caire',
     'New York',
-    'Tampon',
     'Berlaimont'
 ];
+let placeDans = [
+    'la Batcave',
+    'un réacteur nucléaire',
+    'une cave',
 
+];
+let placeSur= [
+    'Namek',
+    'une île',
+
+];
+let placeAu = [
+    'Caire',
+    'Tampon',
+
+];
+let placeEn = [
+    'Martinique',
+    'enfer',
+];
+
+let place = placeA.concat(placeDans, placeSur, placeAu, placeEn);
+
+// ----- Variables
 let num;
 let result = [];
 let sent;
 let hist = [];
-
 let theName = document.getElementById("name");
 let valid = document.getElementById('valid');
 let yes = document.getElementById("yes");
 let suite = document.getElementById('suite');
 let text = document.getElementById('text');
 
+// ----- Functions
 
 function  SetWord(array){
     num = Math.floor(Math.random() * array.length);
@@ -145,15 +168,26 @@ function SetTransitive(array,index){
  * @return {string}
  */
 function SetArticle(g){
-    return (femItem[g] ? " une " : " un ");
+    return (femItem.indexOf(g)>=0 ? " une " : " un ");
 }
 
 /**
  * @return {string}
  */
 function SetSentence(arr){
-    sent = arr[0]+" est en train "+arr[1]+arr[2]+arr[3]+arr[4]+" alors qu'il fait "+arr[5]+"°C à "+arr[6];
+    sent = arr[0]+" est en train "+arr[1]+arr[2]+" avec "+arr[3]+arr[4]+" alors qu'il fait "+arr[5]+"°C "+arr[6]+arr[7];
     return sent;
+}
+
+/**
+ * @return {string}
+ */
+function prePlace (g){
+    if (placeA.indexOf(g)>=0){return "à ";}
+    else if (placeAu.indexOf(g)>=0){return "au ";}
+    else if (placeSur.indexOf(g)>=0){return "sur ";}
+    else if (placeDans.indexOf(g)>=0){return "dans ";}
+    else if (placeEn.indexOf(g)>=0){return "en ";}
 }
 
 function GetSentence (){
@@ -164,41 +198,12 @@ function GetSentence (){
     result.splice(3,0,SetArticle(result[3]));
     SetWord(temp);
     SetWord(place);
+    result.splice(6,0, prePlace(result[6]));
     SetSentence(result);
-    console.log(sent);
     hist.push(sent);
     text.innerHTML = sent;
     result.splice(0,result.length);
-
 }
-// function setPlace () {
-//     a = generateNum(lieux);
-//     switch (lieux[a])
-//     {
-//         case 'une cave':
-//         case 'la Batcave':
-//         case 'un réacteur nucléaire':
-//           place = " dans ";
-//           break;
-//         case 'Martinique':
-//         case "enfer" :
-//             place = " en ";
-//             break;
-//         case "Caire":
-//         case 'Tampon':
-//             place = " au ";
-//             break;
-//         case "Namek":
-//         case 'une île':
-//             place = " sur ";
-//             break;
-//         default:
-//             place = "°C à ";
-//             break;
-//     }
-//     return place;
-// }
-//
 
 valid.addEventListener("click", function (){
     theName = theName.value;
