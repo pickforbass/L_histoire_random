@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f51aa8d3-769c-44b5-bd76-166b1332d3aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debrief.md" beforeDir="false" afterPath="$PROJECT_DIR$/Debrief.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
@@ -57,7 +56,9 @@
       <updated>1574426430291</updated>
       <workItem from="1574426431578" duration="18996000" />
       <workItem from="1574675636986" duration="1630000" />
-      <workItem from="1586266358093" duration="37680000" />
+      <workItem from="1586266358093" duration="37855000" />
+      <workItem from="1586502735541" duration="884000" />
+      <workItem from="1586520119526" duration="969000" />
     </task>
     <task id="LOCAL-00001" summary="new js code">
       <created>1586353066501</created>
@@ -80,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586434743384</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="History ok&#10;&#10;CSS bugs to fix&#10;&#10;To Do : Adding items, verbs etc...">
+      <created>1586440401314</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586440401314</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,32 +114,21 @@
     <MESSAGE value="new js code" />
     <MESSAGE value="bug to fix on article item function&#10;create historic div &amp; new words insert div" />
     <MESSAGE value="Main process ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main process ok" />
+    <MESSAGE value="History ok&#10;&#10;CSS bugs to fix&#10;&#10;To Do : Adding items, verbs etc..." />
+    <option name="LAST_COMMIT_MESSAGE" value="History ok&#10;&#10;CSS bugs to fix&#10;&#10;To Do : Adding items, verbs etc..." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1929" y="-196" key="CommitChangelistDialog2" timestamp="1586434742159">
+    <state x="1929" y="-196" key="CommitChangelistDialog2" timestamp="1586440400272">
       <screen x="1366" y="-313" width="1920" height="1040" />
     </state>
-    <state x="1929" y="-196" key="CommitChangelistDialog2/0.0.1366.728/1366.-313.1920.1040@1366.-313.1920.1040" timestamp="1586434742159" />
+    <state x="1929" y="-196" key="CommitChangelistDialog2/0.0.1366.728/1366.-313.1920.1040@1366.-313.1920.1040" timestamp="1586440400272" />
     <state x="1458" y="-221" width="1736" height="856" key="DiffContextDialog" timestamp="1586353039044">
       <screen x="1366" y="-313" width="1920" height="1040" />
     </state>
     <state x="1458" y="-221" width="1736" height="856" key="DiffContextDialog/0.0.1366.728/1366.-313.1920.1040@1366.-313.1920.1040" timestamp="1586353039044" />
-    <state x="1918" y="-57" key="Vcs.Push.Dialog.v2" timestamp="1586434752840">
+    <state x="1918" y="-57" key="Vcs.Push.Dialog.v2" timestamp="1586440409384">
       <screen x="1366" y="-313" width="1920" height="1040" />
     </state>
-    <state x="1918" y="-57" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.-313.1920.1040@1366.-313.1920.1040" timestamp="1586434752840" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/scripts.js</url>
-          <line>204</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="1918" y="-57" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.-313.1920.1040@1366.-313.1920.1040" timestamp="1586440409384" />
   </component>
 </project>

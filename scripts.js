@@ -149,6 +149,7 @@ let yes = document.getElementById("yes");
 let suite = document.getElementById('suite');
 let text = document.getElementById('text');
 let historyList = document.getElementById('history-list');
+let headerRight = document.getElementById('header-right');
 
 // ----- Functions
 
@@ -246,5 +247,6 @@ yes.addEventListener("click", function (){
 suite.addEventListener("click", function(){
     GetSentence();
     AddHistList();
+    headerRight.classList = "appear";
     });
 
